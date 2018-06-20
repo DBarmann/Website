@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="de">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -7,7 +7,7 @@
 
 	<meta name="keywords" content="ScrollMagic, example, scrolling, attaching, scrollbar, tween, tweenmax" />
 	<meta name="author"	content="Jan Paepke (www.janpaepke.de)" />
-	<title>Image Sequence - Examples - ScrollMagic</title>
+	<title>Reevo</title>
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
@@ -24,8 +24,6 @@
 	<script type="text/javascript" src="assets/js/lib/modernizr.custom.min.js"></script>
 	<script type="text/javascript" src="assets/js/examples.js"></script>
 
-
-
 	<script type="text/javascript" src="assets/js/lib/greensock/TweenMax.min.js"></script>
 	<script type="text/javascript" src="assets/scrollmagic/uncompressed/ScrollMagic.js"></script>
 	<script type="text/javascript" src="assets/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
@@ -39,19 +37,59 @@
 </script>
 
 <body>
-	<div class="container">
-		<section class="intro">
-			<div class="row justify-content-center">
-				<div class="col-4">
-					<img src="assets/img/logo.svg" class="img-fluid" alt="Responsive image">
+			<section class="intro container">
+				<div class="row justify-content-center">
+					<div class="col-4">
+						<img src="assets/img/logo.svg" class="img-fluid">
+					</div>
+				</div>
+			</section>
+
+			<section class="glasses container"  id="glasses_trigger">
+				<div id="glasses_container">
+					<div class="row align-items-center justify-content-center text-center">
+						<div class="col-8">
+							<h2>Expand Your Reality</h2>
+							<p>AR Glasses will upgrade your view to a whole new level of perception. Be able to see the unseen. Discover a completely new experience. Put on your glasses now.</p>
+						</div>
+						<div class="col-12">
+							<img id="glasses_image" src="assets/img/glasses/glasses.svg" class="img-fluid" alt="Responsive image">
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<section class="skyline container-fluid"  id="skyline_trigger">
+			<div id="skyline_container">
+				<div class="row align-items-center">
+					<img class="img_absolute" id="skyline_zeppelin" src="assets/img/skyline/zeppelin.png">
+					<div class="col-6">
+						<img src="assets/img/skyline/skyline.png" class="img-fluid" alt="Responsive image">
+					</div>
+					<div class="col-3 offset-1">
+						<h2>Venture A Glance</h2>
+						<p>We have created a completely new way of transportation for you. The next generation of mobility made possible by REEVO Concept.</p>
+						<p>Dive into a breathtaking future. Join us on a journey that will revolutionize over 100 years of development.</p>
+					</div>
 				</div>
 			</div>
 		</section>
-		<section class="fahrstuhl" id="fahrstul_trigger">
+		<section class="fahrstuhl container" id="fahrstul_trigger">
 			<div id=fahrstuhl_container>
+				<div>
+					<div class="col-12 fahrstuhl_text_4 overhead_text">
+						<h2>Get in your new driving experience</h2>
+					</div>
+					<div class="col-12 fahrstuhl_text_5 overhead_text">
+						<h2>Your social hub.</h2>
+					</div>
+				</div>
 				<div class="row">
 					<div class="col-12">
-						<img class="img_absolute img-fluid" id="car_fix" src="assets/img/car/car_fix.png" class="img-fluid" alt="Responsive image">
+						<img class="img_absolute img-fluid" id="car_fix_dach" src="assets/img/car/car_fix_dach.png" class="img-fluid" alt="Responsive image">
+					</div>
+					<div class="col-12">
+						<img class="img_absolute img-fluid" id="car_fix_stuhl" src="assets/img/car/car_fix_stuhl.png" class="img-fluid" alt="Responsive image">
 					</div>
 					<div class="col-12">
 						<img class="img_absolute img-fluid" id="car_door_l" src="assets/img/car/car_door_l.png" class="img-fluid" alt="Responsive image">
@@ -69,7 +107,40 @@
 						<img class="img_absolute img-fluid" id="fahrstuhl_r" src="assets/img/fahrstuhl/fahrstuhl_tür_r.png" class="img-fluid" alt="Responsive image">
 					</div>
 				</div>
+				<div class="side_text">
+					<div class="col-3 fahrstuhl_text_1">
+						<h2>1. Always ready for you.</h2>
+						<p>Reevo is always ready for your needs.</p>
+					</div>
+					<div class="col-3 fahrstuhl_text_2">
+						<h2>2. Always ready for you.</h2>
+						<p>Reevo is always ready for your needs and adapts to your behaviour.</p>
+					</div>
+					<div class="col-3 fahrstuhl_text_3">
+						<h2>3. Always ready for you.</h2>
+						<p>Reevo is always ready for your needs and adapts to your behaviour.</p>
+					</div>
+				</div>
 		</div>
+		</section>
+
+		<section class="social_hub container-fluid">
+			<div class="row">
+				<div class="col-4">
+					<div class="col-12">
+						<img class="img-fluid" src="assets/img/car/car_fix_stuhl.png">
+					</div>
+					<div class="col-12">
+						<p>Humans always gathered around a  social center point.</p>
+					</div>
+				</div>
+				<div class="col-4">
+
+				</div>
+				<div class="col-4">
+
+				</div>
+			</div>
 		</section>
 
 		<section class="fahrt" style="margin-top: 400px;">
@@ -78,75 +149,97 @@
 		</p>
 		</section>
 
-	</div>
+
+
+
 	<script type="text/javascript" src="assets/js/tracking.js"></script>
 
 
 	<script>
 
 
-	TweenMax.set("#car_fix", {scale: 0.5, autoAlpha: 0});
+	TweenMax.set("#car_fix_dach", {scale: 0.5, autoAlpha: 0});
+	TweenMax.set("#car_fix_stuhl", {scale: 0.5, autoAlpha: 0});
 	TweenMax.set("#car_door_l", {scale: 0.5, autoAlpha: 0});
 	TweenMax.set("#car_door_r", {scale: 0.5, autoAlpha: 0});
 
-	var timeline = new TimelineMax()
-	.to("#fahrstuhl_r", 1 , { left: 500, scale: 2.0, autoAlpha: 0})
-	.to("#fahrstuhl_l",1, { right: 500, scale: 2.0, autoAlpha: 0},0)
-	.to("#fahrstuhl_fix",1, {scale: 2.0, autoAlpha: 0},0)
-	.to("#car_fix",1, {scale: 1.0, autoAlpha: 1},0.2)
-	.to("#car_door_l",1, {scale: 1.0, autoAlpha: 1},0.2)
-	.to("#car_door_r",1, {scale: 1.0, autoAlpha: 1},0.2);
+	TweenMax.set("#skyline_zeppelin", {right: 0, autoAlpha: 0, scale: 0.5});
 
+	TweenMax.set(".fahrstuhl_text_1", {autoAlpha: 0.1});
+	TweenMax.set(".fahrstuhl_text_2", {autoAlpha: 0.1});
+	TweenMax.set(".fahrstuhl_text_3", {autoAlpha: 0.1});
+	TweenMax.set(".fahrstuhl_text_4", {autoAlpha: 0});
+	TweenMax.set(".fahrstuhl_text_5", {autoAlpha: 0});
+
+	var timeline = new TimelineMax()
+	.to("#fahrstuhl_r", 1 , { top: 200},0)
+	.to("#fahrstuhl_l", 1 , { top: 200},0)
+	.to("#fahrstuhl_fix", 1 , { top: 200},0)
+	.to(".fahrstuhl_text_1", 1 , { autoAlpha: 1},0)
+	.to(".fahrstuhl_text_2", 1 , { autoAlpha: 1},0.6)
+	.to(".fahrstuhl_text_3", 1 , { autoAlpha: 1},1.2)
+	.to("#fahrstuhl_r", 1 , { top: 0},1.2)
+	.to("#fahrstuhl_l", 1 , { top: 0},1.2)
+	.to("#fahrstuhl_fix", 1 , { top: 0},1.2)
+	.to(".fahrstuhl_text_1", 1 , { autoAlpha: 0},1.5)
+	.to(".fahrstuhl_text_2", 1 , { autoAlpha: 0},1.6)
+	.to(".fahrstuhl_text_3", 1 , { autoAlpha: 0},1.8)
+	.to("#fahrstuhl_r", 1 , { left: 500, scale: 2.0, autoAlpha: 0},2.5)
+	.to("#fahrstuhl_l",1, { right: 500, scale: 2.0, autoAlpha: 0},2.5)
+	.to("#fahrstuhl_fix",1, {scale: 2.0, autoAlpha: 0},2.5)
+	.to("#car_fix_dach",1, {scale: 1.0, autoAlpha: 1},3)
+	.to("#car_fix_stuhl",1, {scale: 1.0, autoAlpha: 1},3)
+	.to("#car_door_l",1, {scale: 1.0, autoAlpha: 1},3)
+	.to("#car_door_r",1, {scale: 1.0, autoAlpha: 1},3)
+	.to(".fahrstuhl_text_4",1, {autoAlpha: 1},3)
+	.to("#car_door_l",1, {right: 200},4)
+	.to("#car_door_r",1, {left: 200},4)
+	.to("#car_door_l",1, {autoAlpha: 0},5)
+	.to("#car_door_r",1, {autoAlpha: 0},5)
+	.to(".fahrstuhl_text_4",1, {autoAlpha: 0},5)
+	.to(".fahrstuhl_text_5",1, {autoAlpha: 1},5.5)
+	.to("#car_fix_dach",1, {autoAlpha: 0},5.5);
+
+
+	var timelineGlasses = new TimelineMax()
+	.to("#glasses_image", 1 , { scale: 5.0, autoAlpha: 0})
 
 
 	// build scene
-	var fahstuhl_l = new ScrollMagic.Scene({
+	var fahstuhl = new ScrollMagic.Scene({
 						triggerElement: "#fahrstul_trigger",
-						duration: 600
+						duration: 1000
 					})
 					.setPin("#fahrstuhl_container", {pushFollowers: true})
 					.setTween(timeline) // trigger a TweenMax.to tween
 					.addIndicators({name: "1 (duration: 600)"}) // add indicators (requires plugin)
-					.offset(300)
+					.offset(400)
 					.addTo(controller);
 
 
+var skyline = new ScrollMagic.Scene({
+					triggerElement: "#skyline_trigger",
+					duration: 300,
+					triggerHook: "onCenter"
+				})
+				.setPin("#skyline_container", {pushFollowers: true})
+				.setTween("#skyline_zeppelin", {right: 500, autoAlpha: 1, scale: 1.0}) // trigger a TweenMax.to tween
+				.addIndicators({name: "2 (duration: 200)"}) // add indicators (requires plugin)
+				.offset(200)
+				.addTo(controller);
 
-	// var fahstuhl_l = new ScrollMagic.Scene({
-	// 					triggerElement: "#fahrstul_trigger",
-	// 					duration: 600
-	// 				})
-	// 				.setPin("#fahrstuhl_container", {pushFollowers: true})
-	// 				.setTween("#fahrstuhl_r", { left: 500, scale: 2.0, opacity: 0}) // trigger a TweenMax.to tween
-	// 				.addIndicators({name: "1 (duration: 600)"}) // add indicators (requires plugin)
-	// 				.offset(300)
-	// 				.addTo(controller);
+var glasses = new ScrollMagic.Scene({
+					triggerElement: "#glasses_trigger",
+					duration: 500,
+					triggerHook: "onCenter"
+				})
+				.setPin("#glasses_container", {pushFollowers: true})
+				.setTween(timelineGlasses) // trigger a TweenMax.to tween
+				.addIndicators({name: "2 (duration: 200)"}) // add indicators (requires plugin)
+				.offset(200)
+				.addTo(controller);
+
 	//
-	//
-	// 	var fahstuhl_r = new ScrollMagic.Scene({
-	// 						triggerElement: "#fahrstul_trigger",
-	// 						duration: 600
-	// 					})
-	// 					.setTween("#fahrstuhl_l", { right: 500, scale: 2.0, opacity: 0}) // trigger a TweenMax.to tween
-	// 					.offset(300)
-	// 					.addTo(controller);
-	//
-	//
-	// var fahstuhl_fix = new ScrollMagic.Scene({
-	// 					triggerElement: "#fahrstul_trigger",
-	// 					duration: 600
-	// 				})
-	// 				.setTween("#fahrstuhl_fix", { scale: 2.0, opacity: 0}) // trigger a TweenMax.to tween
-	// 				.offset(300)
-	// 				.addTo(controller);
-	//
-	// var fahstuhl_fix = new ScrollMagic.Scene({
-	// 					triggerElement: "#fahrstul_trigger",
-	// 					duration: 600
-	// 				})
-	// 				.setTween("#fahrstuhl_fix", { scale: 2.0, opacity: 0}) // trigger a TweenMax.to tween
-	// 				.offset(300)
-	// 				.addTo(controller);
 	</script>
 
 
