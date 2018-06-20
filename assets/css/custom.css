@@ -1,0 +1,34 @@
+/*Blue rgba(0,0,40,1)*/
+
+*{
+
+}
+
+body{
+  background-color: rgba(0,0,40,1.0);
+}
+
+
+
+/* Section */
+
+
+
+
+/* Intro */
+
+section.intro {
+  margin-top: 300px;
+}
+
+
+/* fahrstuhl */
+
+section.fahrstuhl{
+  margin-top: 400px;
+  margin-bottom: 500px;
+}
+
+img.img_absolute{
+  position: absolute;
+}
