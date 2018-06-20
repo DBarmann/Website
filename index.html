@@ -51,6 +51,15 @@
 			<div id=fahrstuhl_container>
 				<div class="row">
 					<div class="col-12">
+						<img class="img_absolute img-fluid" id="car_fix" src="assets/img/car/car_fix.png" class="img-fluid" alt="Responsive image">
+					</div>
+					<div class="col-12">
+						<img class="img_absolute img-fluid" id="car_door_l" src="assets/img/car/car_door_l.png" class="img-fluid" alt="Responsive image">
+					</div>
+					<div class="col-12">
+						<img class="img_absolute img-fluid" id="car_door_r" src="assets/img/car/car_door_r.png" class="img-fluid" alt="Responsive image">
+					</div>
+					<div class="col-12">
 						<img class="img_absolute img-fluid" id="fahrstuhl_fix" src="assets/img/fahrstuhl/fahrstuhl_fix.png" class="img-fluid" alt="Responsive image">
 					</div>
 					<div class="col-12">
@@ -59,17 +68,14 @@
 					<div class="col-12">
 						<img class="img_absolute img-fluid" id="fahrstuhl_r" src="assets/img/fahrstuhl/fahrstuhl_tür_r.png" class="img-fluid" alt="Responsive image">
 					</div>
-					<div class="col-12">
-						<img class="img_absolute img-fluid" id="car" src="assets/img/car/car_fix.png" class="img-fluid" alt="Responsive image">
-					</div>
-					<div class="col-12">
-						<img class="img_absolute img-fluid" id="car" src="assets/img/car/car_door_l.png" class="img-fluid" alt="Responsive image">
-					</div>
-					<div class="col-12">
-						<img class="img_absolute img-fluid" id="car" src="assets/img/car/car_door_r.png" class="img-fluid" alt="Responsive image">
-					</div>
 				</div>
 		</div>
+		</section>
+
+		<section class="fahrt" style="margin-top: 400px;">
+		<p>
+			Buffer
+		</p>
 		</section>
 
 	</div>
@@ -79,6 +85,17 @@
 	<script>
 
 
+	TweenMax.set("#car_fix", {scale: 0.5, autoAlpha: 0});
+	TweenMax.set("#car_door_l", {scale: 0.5, autoAlpha: 0});
+	TweenMax.set("#car_door_r", {scale: 0.5, autoAlpha: 0});
+
+	var timeline = new TimelineMax()
+	.to("#fahrstuhl_r", 1 , { left: 500, scale: 2.0, autoAlpha: 0})
+	.to("#fahrstuhl_l",1, { right: 500, scale: 2.0, autoAlpha: 0},0)
+	.to("#fahrstuhl_fix",1, {scale: 2.0, autoAlpha: 0},0)
+	.to("#car_fix",1, {scale: 1.0, autoAlpha: 1},0.2)
+	.to("#car_door_l",1, {scale: 1.0, autoAlpha: 1},0.2)
+	.to("#car_door_r",1, {scale: 1.0, autoAlpha: 1},0.2);
 
 
 
@@ -88,36 +105,48 @@
 						duration: 600
 					})
 					.setPin("#fahrstuhl_container", {pushFollowers: true})
-					.setTween("#fahrstuhl_r", { left: 500, scale: 2.0, opacity: 0}) // trigger a TweenMax.to tween
+					.setTween(timeline) // trigger a TweenMax.to tween
 					.addIndicators({name: "1 (duration: 600)"}) // add indicators (requires plugin)
 					.offset(300)
 					.addTo(controller);
 
 
-		var fahstuhl_r = new ScrollMagic.Scene({
-							triggerElement: "#fahrstul_trigger",
-							duration: 600
-						})
-						.setTween("#fahrstuhl_l", { right: 500, scale: 2.0, opacity: 0}) // trigger a TweenMax.to tween
-						.offset(300)
-						.addTo(controller);
 
-
-	var fahstuhl_fix = new ScrollMagic.Scene({
-						triggerElement: "#fahrstul_trigger",
-						duration: 600
-					})
-					.setTween("#fahrstuhl_fix", { scale: 2.0, opacity: 0}) // trigger a TweenMax.to tween
-					.offset(300)
-					.addTo(controller);
-
-	var fahstuhl_fix = new ScrollMagic.Scene({
-						triggerElement: "#fahrstul_trigger",
-						duration: 600
-					})
-					.setTween("#fahrstuhl_fix", { scale: 2.0, opacity: 0}) // trigger a TweenMax.to tween
-					.offset(300)
-					.addTo(controller);
+	// var fahstuhl_l = new ScrollMagic.Scene({
+	// 					triggerElement: "#fahrstul_trigger",
+	// 					duration: 600
+	// 				})
+	// 				.setPin("#fahrstuhl_container", {pushFollowers: true})
+	// 				.setTween("#fahrstuhl_r", { left: 500, scale: 2.0, opacity: 0}) // trigger a TweenMax.to tween
+	// 				.addIndicators({name: "1 (duration: 600)"}) // add indicators (requires plugin)
+	// 				.offset(300)
+	// 				.addTo(controller);
+	//
+	//
+	// 	var fahstuhl_r = new ScrollMagic.Scene({
+	// 						triggerElement: "#fahrstul_trigger",
+	// 						duration: 600
+	// 					})
+	// 					.setTween("#fahrstuhl_l", { right: 500, scale: 2.0, opacity: 0}) // trigger a TweenMax.to tween
+	// 					.offset(300)
+	// 					.addTo(controller);
+	//
+	//
+	// var fahstuhl_fix = new ScrollMagic.Scene({
+	// 					triggerElement: "#fahrstul_trigger",
+	// 					duration: 600
+	// 				})
+	// 				.setTween("#fahrstuhl_fix", { scale: 2.0, opacity: 0}) // trigger a TweenMax.to tween
+	// 				.offset(300)
+	// 				.addTo(controller);
+	//
+	// var fahstuhl_fix = new ScrollMagic.Scene({
+	// 					triggerElement: "#fahrstul_trigger",
+	// 					duration: 600
+	// 				})
+	// 				.setTween("#fahrstuhl_fix", { scale: 2.0, opacity: 0}) // trigger a TweenMax.to tween
+	// 				.offset(300)
+	// 				.addTo(controller);
 	</script>
 
 
