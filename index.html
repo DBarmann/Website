@@ -51,13 +51,22 @@
 			<div id=fahrstuhl_container>
 				<div class="row">
 					<div class="col-12">
-						<img class="img_absolute img-fluid" src="assets/img/fahrstuhl/fahrstuhl_fix.png" class="img-fluid" alt="Responsive image">
+						<img class="img_absolute img-fluid" id="fahrstuhl_fix" src="assets/img/fahrstuhl/fahrstuhl_fix.png" class="img-fluid" alt="Responsive image">
 					</div>
 					<div class="col-12">
 						<img class="img_absolute img-fluid" id="fahrstuhl_l" src="assets/img/fahrstuhl/fahrstuhl_tür_l.png" class="img-fluid" alt="Responsive image">
 					</div>
 					<div class="col-12">
 						<img class="img_absolute img-fluid" id="fahrstuhl_r" src="assets/img/fahrstuhl/fahrstuhl_tür_r.png" class="img-fluid" alt="Responsive image">
+					</div>
+					<div class="col-12">
+						<img class="img_absolute img-fluid" id="car" src="assets/img/car/car_fix.png" class="img-fluid" alt="Responsive image">
+					</div>
+					<div class="col-12">
+						<img class="img_absolute img-fluid" id="car" src="assets/img/car/car_door_l.png" class="img-fluid" alt="Responsive image">
+					</div>
+					<div class="col-12">
+						<img class="img_absolute img-fluid" id="car" src="assets/img/car/car_door_r.png" class="img-fluid" alt="Responsive image">
 					</div>
 				</div>
 		</div>
@@ -69,15 +78,19 @@
 
 	<script>
 
+
+
+
+
 	// build scene
 	var fahstuhl_l = new ScrollMagic.Scene({
 						triggerElement: "#fahrstul_trigger",
 						duration: 600
 					})
 					.setPin("#fahrstuhl_container", {pushFollowers: true})
-					.setTween("#fahrstuhl_r", { left: 100}) // trigger a TweenMax.to tween
-					.offset(200)
+					.setTween("#fahrstuhl_r", { left: 500, scale: 2.0, opacity: 0}) // trigger a TweenMax.to tween
 					.addIndicators({name: "1 (duration: 600)"}) // add indicators (requires plugin)
+					.offset(300)
 					.addTo(controller);
 
 
@@ -85,9 +98,26 @@
 							triggerElement: "#fahrstul_trigger",
 							duration: 600
 						})
-						.setTween("#fahrstuhl_l", { right: 100}) // trigger a TweenMax.to tween
-						.offset(200)
+						.setTween("#fahrstuhl_l", { right: 500, scale: 2.0, opacity: 0}) // trigger a TweenMax.to tween
+						.offset(300)
 						.addTo(controller);
+
+
+	var fahstuhl_fix = new ScrollMagic.Scene({
+						triggerElement: "#fahrstul_trigger",
+						duration: 600
+					})
+					.setTween("#fahrstuhl_fix", { scale: 2.0, opacity: 0}) // trigger a TweenMax.to tween
+					.offset(300)
+					.addTo(controller);
+
+	var fahstuhl_fix = new ScrollMagic.Scene({
+						triggerElement: "#fahrstul_trigger",
+						duration: 600
+					})
+					.setTween("#fahrstuhl_fix", { scale: 2.0, opacity: 0}) // trigger a TweenMax.to tween
+					.offset(300)
+					.addTo(controller);
 	</script>
 
 
